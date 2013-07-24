@@ -78,7 +78,19 @@
       .statistics h3, .statistics p {
         color: white;
       }
-
+      .btnsocial {
+        width: 2em;
+        hight: 2em;
+        padding: 0 0 0 0;
+        text-align: center;
+      }
+      .stats-across {
+        text-align: center;
+      }
+      .stats-across h3 {
+        margin-top: 0;
+      }
+      
       /* Marketing Copy and Footer */
       
       .copy {
@@ -99,26 +111,26 @@
       .footer a {
         color: #ccccff;
       }
-     </style>
+    </style>
     </head>
   <body>
     <!-- Mobile-friendly navbar from twitter bootstrap. -->
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div  class="navbar-inner">
 	<div class="container">
-	  <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-	    <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-	    <span class="icon-bar"></span>
-	  </button>
-	  <a class="brand" href="#">Apps2Jobs</a>
-	  <div class="nav-collapse collapse">
-	    <ul class="nav">
-	      <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-	    </ul>
-	  </div><!--/ .nav-collapse -->
+	   <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	   </button>
+	    <a class="brand" href="#">Apps2Jobs</a>
+	    <div class="nav-collapse collapse">
+	      <ul class="nav">
+		<li class="active"><a href="#">Home</a></li>
+		<li><a href="#about">About</a></li>
+		<li><a href="#contact">Contact</a></li>
+	      </ul>
+	    </div><!--/ .nav-collapse -->
 	</div><!--/ container -->
       </div><!--/ navbar-inner -->
     </div><!--/ navbar navbar-inverse navbar-fixed-top -->
@@ -131,50 +143,42 @@
       </div><!--/ row-fluid heading -->
       <div class="row-fluid subheading">
 	<div class="span12">
-	  <p class="lead">Track your apps, find a job, launch a career! </p>
+	  <p class="lead page-header">Track your apps, find a job, launch a career! </p>
 	</div><!--/ span12 -->
       </div><!--/ row-fluid subheading -->
+      <div class="row-fluid">
+	<div class="span10 offset1">
+	  <div class="row-fluid stats-across">
+	    <div class="span4">
+	      <h3>1 <small>backers</small></h3>
+	    </div><!--/ span4  -->
+	    <div class="span4">
+	      <h3>$150 <small>of $3500</small></h3>
+	    </div><!--/ span4 -->
+	    <div class="span4">
+	      <h3>35 <small>days left</small></h3>
+	    </div><!--/ span4 -->
+	  </div><!--/ row-fluid stats-across -->
+	</div><!--/ span10 offset1 -->
+      </div><!--/ row-fluid -->
+      <div class="row-fluid">
+	<div class="span10 offset1">
+	  <div class="thermometer progress progress-striped active">
+	    <div class="bar bar-success" style="width: 5%;"></div>
+	    <div class="bar bar-warning" style="width: 95%;"></div>
+	  </div><!--/ thermometer progress progress-striped active -->
+	  <div class="span6 offset3 social">
+	    <button class="btn btnsocial btn-twitter"><i class="icon-twitter"></i></button>
+            <button class="btn btnsocial btn-google-plus"><i class="icon-google-plus"></i></button>
+	    <button class="btn btnsocial btn-facebook"><i class="icon-facebook"></i></button>
+	  </div><!--/  -->
+	</div><!--/ span10 offset1 -->
+      </div><!--/ row-fluid-->
+
       <div class="row-fluid pitch">
         <div class="span5 offset1 video">
           <img class="img-polaroid" src="http://placehold.it/480x300">
         </div><!--/ span5 offset1 video -->
-	<div class="span5 actions">
-	  <div class="span8 offset2">
-	    <div class="statistics">
-	      <div class="span4">
-		<div class="linediv-l">
-		  <h3>0</h3> <p>backers</p>
-		</div><!--/ linediv-l -->
-	      </div><!--/ span4 -->
-	      <div class="span4">
-		<div class="linediv-c">
-		  <h3>$0</h3> <p>of $3500</p>
-		</div><!--/ linediv-c -->
-	      </div><!--/ span4 -->
-              <div class="span4">
-		<div class="linediv-r">
-		  <h3>30</h3> <p>days left</p>
-		</div><!--/ linediv-r -->
-              </div><!--/ span4 -->
-	    </div><!--/ statistics -->
-	  </div><!--/ span8 offset2-->
-	  <div class="span10 offset1">
-	    <div class="thermometer progress progress-striped active">
-	      <div class="bar bar-success" style="width: 1%;">
-	      </div><!--/ bar bar-success -->
-	      <div class="bar bar-warning" style="width: 99%;">
-	      </div><!--/ bar bar-warning -->
-	    </div><!--/ thermometer progress active -->
-	    <div class="span6 offset3 order">
-	      <button class="btn btn-success btn-large">Preorder</button>
-	    </div><!--/ span6 offset3 order -->
-	    <div class="span8 offset2 social">
-	      <button class="btn btn-twitter"><i class="icon-twitter"></i> | Twitter</button>
-              <button class="btn btn-google-plus"><i class="icon-google-plus"></i> | Google+</button>
-	      <button class="btn btn-facebook"><i class="icon-facebook"></i> | Facebook</button>
-	    </div><!--/ span8 offset2 social -->
-	  </div><!--/ span10 offset1 -->
-	</div><!--/ span5 actions -->
       </div><!--/ row-fluid pitch -->
 
       <!-- Marketing section -->
