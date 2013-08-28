@@ -13,7 +13,7 @@
 /css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=Kaushan+Script:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css">
-<link rel="shortcut icon" href="http://i.imgur.com/KaJhu2S.png">
+<link rel="shortcut icon" href="http://i.imgur.com/gkQHoL2.png">
     <style type="text/css">
       /* All form factors */
       
@@ -33,68 +33,6 @@
       p {
         font-size: 18px;
         line-height: 24px;
-      }
-      .polaroid {
-        margin-top: -15px;
-        margin-left: auto;
-        margin-right: auto;
-        height: 290px;
-        width: 300px;
-        z-index: 5;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-      }
-      .polaroid-1 {       
-        -webkit-transform: rotate(3deg);
-           -moz-transform: rotate(3deg);
-                transform: rotate(3deg);
-      }
-      .polaroid-2 {       
-        -webkit-transform: rotate(-2deg);
-           -moz-transform: rotate(-2deg);
-                transform: rotate(-2deg);
-      }
-      .polaroid-3 {       
-        -webkit-transform: rotate(5deg);
-           -moz-transform: rotate(5deg);
-                transform: rotate(5deg);
-      }
-      .polaroid i {
-        background-color: #0055d4;
-        text-align: center;
-        padding: 15px;
-        font-size: 200px;
-               border: 15px solid #fff;
-           border-top: 15px solid #fff;
-        border-bottom: 50px solid #fff;
-        -webkit-box-shadow: 5px 5px 5px rgba(0,0,0,.25);
-           -moz-box-shadow: 5px 5px 5px rgba(0,0,0,.25);
-                box-shadow: 5px 5px 5px rgba(0,0,0,.25);
-      }
-      .polaroid-large:hover {
-        -webkit-transform: scale(1.3);
-           -moz-transform: scale(1.3);
-        position: absolute;
-        top: 0;
-        z-index: 6;
-      }
-      .polaroid p {
-        font-size: 18px;
-        margin: 0 25px 10px 25px;
-        position: absolute;
-        text-align: left;
-        bottom: 0px;
-        font-family: 'Kaushan Script', cursive;
-        color: black;
-      }
-      .polaroid-under {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 4;
       }
 
       /* Pitch and Action */
@@ -137,6 +75,15 @@
       .footer a {
         color: #ccccff;
       }
+      .video{
+        text-align: center;
+      }
+      .video img {
+        -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.75);
+           -moz-box-shadow: 0 5px 15px rgba(0,0,0,.75);
+                box-shadow: 0 5px 15px rgba(0,0,0,.75);;
+      }
+
 
       /* Navbar */
       
@@ -170,9 +117,8 @@
       }
 
       .imgbar {
-        margin: -5px 3px 0 -3px;
-        height: 18px;
-        z-index: -1;
+        margin: -4px 3px 0 -3px;
+        height: 25px;
       }
 
       /*Jumbotron*/
@@ -181,8 +127,8 @@
         margin-left: -20px;
         margin-right: -20px;
         margin-bottom: 20px;
-        padding: 70px 0 20px 0;
-        background: url(http://i.imgur.com/tl1mrxk.gif);
+        padding: 70px 0 10px 0;
+        background: url(http://i.imgur.com/5x40LMw.gif);
         color: #fff;
                 box-shadow: inset 0 5px 15px rgba(0,0,0,.4), inset 0 -5px 15px rgba(0,0,0,.4);
         -webkit-box-shadow: inset 0 5px 15px rgba(0,0,0,.4), inset 0 -5px 15px rgba(0,0,0,.4);
@@ -196,68 +142,13 @@
         margin-bottom: 10px;
       }
 
-      /* Carousel */
-
-      .carousel {
-        height: 250px;
-        margin-bottom: 0;
-      }
-      .carousel .container {
-        position: relative;
-        z-index: 8;
-      }
-      .carousel-inner {
-        overflow:visible;
-        height: 250px;
-      }
-      .carousel-control {
-        margin-top: 0;
-        font-size: 50px;
-        text-shadow: 0 1px 1px rgba(0,0,0,.4);
-        background-color: transparent;
-        border: 0;
-        top: 90%;
-        z-index: 9;
-      }
-      .carousel .item {
-        height: 250px;
-        text-align: center;
-      }
-      .carousel img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 200px;
-      }
-      .carousel-caption {
-        height: 250px;
-        background-color: transparent;
-        position: static;
-        max-width: 100%;
-        padding: 0;
-      }
-      .carousel-caption h1 {
-        text-align: right;
-        margin: 0;
-        font-weight: bold;
-        line-height: 1.25;
-        text-shadow: 0 1px 1px rgba(0,0,0,.4);      
-      }
-      .carousel-caption .lead {
-        text-align: right;
-        margin: 0;
-        font-weight: bold;
-        line-height: 1.25;
-        text-shadow: 0 1px 1px rgba(0,0,0,.4);
-      }
-
       /* http://support.addthis.com/customer/portal/questions/1136093-share-buttons-in-center-position */      
       
       div.addthis_toolbox2 {
         width: 320px;
         margin: 0 auto;
         margin-top: 2px;
+        margin-bottom: 10px;
       }
 
       /* Large desktop */
@@ -269,37 +160,11 @@
         .linediv-r {
           border-left: 1px white solid;
         }
-        .carousel {
-        }
-        .carousel .img {
-          width: auto;
-        }
       }
 
       @media (max-width: 640px) {
         .navbar-wrapper {
-          margin-top:5px;
-        }
-        .carousel {
-          margin-top: 25px;
-        }
-        .carousel .item {
-          height: 150px;
-        }
-        .carousel img {
-          height: 100%;
-        }
-        .carousel-control {
-          margin-top: -50px;
-        }
-        .carousel-caption{
-          margin-top: 25px;
-        }
-        .carousel-caption h1 {
-          font-size: 230%;
-        }
-        .carousel-caption .lead {
-          font-size: 100%;
+          margin-top: 5px;
         }
       }
 
@@ -314,9 +179,7 @@
         }
         .linediv-r {
           border-top: 1px white solid;
-        }
-        .carousel {
-        }
+        
       }
 
 
@@ -351,7 +214,7 @@
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
 	      </button>
-	      <a class="brand" href="#"><img class="imgbar" src="http://i.imgur.com/4q9hFbU.png">hourly:self</a>
+	      <a class="brand" href="#"><img class="imgbar" src="http://i.imgur.com/1pIcHxr.png">hourly:self</a>
 	      <div class="socialsmall">
 		<!-- AddThis Button BEGIN -->
 		<div class="addthis_toolbox addthis_default_style addthis_16x16_style">
@@ -386,7 +249,7 @@
               <h1>hourly:self</h1>
 	    </div> <!--/ heading -->
 	    <div class="subheading">
-              <p class="lead">Collect your data </br> and improve your life!
+              <p class="lead">Collect your life,</br>improve your life!
 	      </p><!--/ lead -->
 	      <div class="coinbase">
 		<a class="coinbase-button" data-button-style="custom_large" data-button-text="Support HourlySelf!" data-code="aec22928d1882ef0230b6d4112df88df" href="https://coinbase.com/checkouts/aec22928d1882ef0230b6d4112df88df">Support HourlySelf!</a>
@@ -404,90 +267,9 @@
 	      </div><!--/ addthis_toolbox addthis_toolbox2 addthis_default_style addthis_32x32_style -->
 	    </div><!--/ subheading -->
           </div><!--/ span4-->
-	  <div class="span5">
-	    <div id="myCarousel" class="carousel">
-	      <div class="carousel-inner">
-		<div class="item active">
-		    <div class="carousel-caption">
-		      <div class="polaroid polaroid-1 polaroid-large">
-			<i class="icon-large icon-time"></i>
-			<p>
-			  <strong>1.</strong> Collect your data!
-			</p>
-		      </div>
-		    </div><!--/ carousel-caption -->
-		</div><!--/ item active -->
-		<div class="item">
-		  <div class="carousel-caption">
-		    <div class="polaroid polaroid-1 polaroid-under">
-		      <i class="icon-large icon-time"></i>
-		      <p>
-			<strong>1.</strong> Collect your data!
-			</p>
-		      </div>
-		      <div class="polaroid polaroid-2 polaroid-large">
-			<i class="icon-large icon-qrcode"></i>
-			<p>
-			<strong>2.</strong> Analize your reports!
-			</p>
-		      </div>
-		    </div><!--/ carousel-caption -->
-		</div><!--/ item -->
-		<div class="item">
-		    <div class="carousel-caption">
-		      <div class="polaroid polaroid-1 polaroid-under">
-			<i class="icon-large icon-time"></i>
-			<p>
-			<strong>1.</strong> Collect your data!
-			</p>
-		      </div>
-		      <div class="polaroid polaroid-2 polaroid-under">
-			<i class="icon-large icon-qrcoded"></i>
-			<p>
-			<strong>2.</strong> Analize your reports!
-			</p>
-		      </div>
-		      <div class="polaroid polaroid-3 polaroid-large">
-			<i class="icon-large icon-user"></i>
-			<p>
-			<strong>3.</strong> Improve your life!
-			</p>
-		      </div>
-		    </div><!--/ carousel-caption -->
-		</div><!--/ item active -->
-		<div class="item">
-		    <div class="carousel-caption">
-		      <div class="polaroid polaroid-1 polaroid-under">
-			<i class="icon-large icon-time"></i>
-			<p>
-			<strong>1.</strong> Collect your data!
-			</p>
-		      </div>
-		      <div class="polaroid polaroid-2 polaroid-under">
-			<i class="icon-large icon-qrcode"></i>
-			<p>
-			<strong>2.</strong> Analize your reports!
-			</p>
-		      </div>
-		      <div class="polaroid polaroid-3 polaroid-under">
-			<i class="icon-large icon-user"></i>
-			<p>
-			<strong>3.</strong> Improve your life!
-			</p>
-		      </div>
-		      <div class="polaroid">
-			<i class="icon-large icon-play"></i>
-			<p>
-			Watch the video for further details!
-			</p>
-		      </div>
-		    </div><!--/ carousel-caption -->
-		</div><!--/ item active -->
-	      </div><!--/ carousel-inner -->
-	      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-	      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-	    </div><!--/ carousel -->
-	  </div><!--/ span4 offset1-->
+	  <div class="span5 video">
+	  <img src="http://i.imgur.com/msHMsi0.png" alt="Video comming soon!"/>
+	  </div><!--/ span5-->
 	</div><!--row-fluid-->
       </div><!--/ container  -->
     </header>
@@ -502,7 +284,7 @@
 	      <h3>1 <small>backers</small></h3>
 	    </div><!--/ span4  -->
 	    <div class="span4">
-	      <h3>$150 <small>of $15000</small></h3>
+	      <h3>$150 <small>of $15.000</small></h3>
 	    </div><!--/ span4 -->
 	    <div class="span4">
 	      <h3>35 <small>days left</small></h3>
@@ -523,149 +305,59 @@
 
       <div class="row-fluid section1">
 	<div class="span4">
-	    <h2>1. Collect your dataaaaaaaaaaaaaaa</h2>
-	    <p>Collect data 
+	    <h2>1. Collect your data</h2>
+	    <p>h:s collects your data asking you directly and connecting to your QSelf apps and gadgets! 
 	  </p>
 	</div><!--/ span4 -->
 	<div class="span4">
-	  <h2>2. aaaaaaaaaaaaaaaaa</h2>
-	  <p></p>
+	  <h2>2. View your data</h2>
+	  <p>h:s presets your data in a meaningful way and helps you understand your behaviour! </p>
 	</div><!--/ span4 -->
 	<div class="span4">
-	  <h2>3. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h2>
-	  <p>
+	  <h2>3. Improve your life</h2>
+	  <p>h:s keeps you foucused on your targets and goals on your life journey!
 	  </p>
 	</div><!--/ span4 -->
       </div><!--/ row--fluid section1 -->
 
-
       <div class="row-fluid section1">
-	<div class="span5 offset1 asset">
+	<div class="span7 asset">
 	  <p>
 	    <h2>What is hourly:self?</h2>
 	    Hourly self is a service that helps you keep track of your quantitative self data by prompting you for the information at timed intervals. Furthermore, it presents the collected data in a meaningful way.
 	  </p>
 	  
-5B	</div><!--/ span5 offset1 asset -->
+	</div><!--/ span5 offset1 asset -->
 	<div class="span5 copy">
-	  <p>Apps2Jobs improves the job search experience with a gamified app, great advice and a fun community. Join and make job searching fun and easy!</p>
-	  <p>Features:
-	    <ul>
-	      <li>Apps2Jobs tracks your job applications and keeps you informed and organized during your search. On all your devices!</li>
-	      <li>App2Jobs suggests tips and tricks to improve your apps.</li>
-	      <li>Apps2Jobs gamifies your search.</li>
-	      <li>Apps2Jobs is a resource made by job searchers for job searchers. No companies allowed.</li>
-	      <li>Apps2Jobs is discreet. Your information is yours and we keep it private. We only aggregate anonymous usage statistics to show you how the community is doing on their job searches.</li>
-	      <li>Apps2Jobs learns from the community. What are you going to teach us today?</li>
-	    </ul></p>
 	</div><!--/ span5 copy -->
       </div><!--/ row--fluid section1 -->
 
 
 
-      <div class="row-fluid section2">
-        <div class="span5 offset1 copy copy-right">
-          <p>Apps2Jobs will use the funds in the following manner:
-	    <table class="table">
-	      <tr>
-		<td align="right">500$</td>
-		<td>Hosting, SSH, domain name</td>
-	      </tr>
-              <tr>
-		<td align="right">1500$</td>
-		<td>Phase 1: Personal app database</td>
-              </tr>
-              <tr>
-                <td align="right">1000$</td>
-		<td>Phase 2: Tips and gamification</td>
-              </tr>
-              <tr>
-                <td align="right">500$</td>
-		<td>Phase 3: Forums</td>
-              </tr>
-	    </table>
-	  </p>
-        </div><!--/ span5 offset1 copy copy-right -->
-	<div class="span5 asset">
-          <img class="img-polaroid" src="http://i.imgur.com/k2b2zPi.jpg" alt="HourlSelf">
-        </div><!--/ span5 asset -->
-      </div><!--/ row-fluid section2 -->
-    </div><!--/ container -->      
-
-
-
-
-      
-    <div class="container">
-      <div class="row-fluid section3">
-        <div class="span5 offset1 copy copy-right">
-          <p>Apps2Jobs will use the funds in the following manner:
-	    <table class="table">
-	      <tr>
-		<td align="right">500$</td>
-		<td>Hosting, SSH, domain name</td>
-	      </tr>
-              <tr>
-		<td align="right">1500$</td>
-		<td>Phase 1: Personal app database</td>
-              </tr>
-              <tr>
-                <td align="right">1000$</td>
-		<td>Phase 2: Tips and gamification</td>
-              </tr>
-              <tr>
-                <td align="right">500$</td>
-		<td>Phase 3: Forums</td>
-              </tr>
-	    </table>
-	  </p>
-        </div><!--/ span5 offset1 copy copy-right -->
-	<div class="span5 asset">
-          <img class="img-polaroid" src="http://i.imgur.com/k2b2zPi.jpg" alt="HourlSelf">
-        </div><!--/ span5 asset -->
-      </div><!--/ row-fluid section3 -->      
-
-      <div class="row-fluid section4">
-	<div class="span5 offset1 asset">
-	  <img class="img-polaroid" src="http://i.imgur.com/gBqznY4.jpg" alt="HorlySelf">
-	</div><!--/ span5 offset1 asset -->
-	<div class="span5 copy">
-	  <p>Apps2Jobs improves the job search experience with a gamified app, great advice and a fun community. Join and make job searching fun and easy!</p>
-	  <p>Features:
-	    <ul>
-	      <li>Apps2Jobs tracks your job applications and keeps you informed and organized during your search. On all your devices!</li>
-	      <li>App2Jobs suggests tips and tricks to improve your apps.</li>
-	      <li>Apps2Jobs gamifies your search.</li>
-	      <li>Apps2Jobs is a resource made by job searchers for job searchers. No companies allowed.</li>
-	      <li>Apps2Jobs is discreet. Your information is yours and we keep it private. We only aggregate anonymous usage statistics to show you how the community is doing on their job searches.</li>
-	      <li>Apps2Jobs learns from the community. What are you going to teach us today?</li>
-	    </ul></p>
-	</div><!--/ span5 copy -->
-      </div><!--/ row--fluid section4 -->
-
     <!-- FAQ -->
 
       <div class="row-fluid faq">
         <div class="span10 offset1">
-          <h3>FAQ</h3>
+          <h3>Frequently Asked Questions</h3>
           <div class="accordion" id="accordion2">
             <div class="accordion-group">
               <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">What does FAQ stand for?</a>
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">How can I help?</a>
               </div><!--/ accordion-heading -->
               <div id="collapseOne" class="accordion-body collapse">
                 <div class="accordion-inner">
-                  Frequently Asked Question.
+                  You can pre-order the product, donate some funds or tweet about us! 
                 </div><!--/ accordion-inner -->
               </div><!--/ collapseOne accordion-body collapse-->
             </div><!--/ accordion-group -->
             <div class="accordion-group">
               <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">What's a Frequently Asked Question?</a>
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">Where can I find more information and updates on the project?</a>
               </div><!-- accordion-heading -->
               <div id="collapseTwo" class="accordion-body collapse">
                 <div class="accordion-inner">
-                  A question which is commonly asked by users.
+                  The page will be continuosly updated during the campaign. You can also find us on:
+		  
                 </div><!--/ accordion-inner -->
               </div><!--/ collapseTwo accordion-body collapse-->
             </div><!--/ accordion-group -->
