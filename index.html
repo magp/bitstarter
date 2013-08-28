@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Hourly Self</title>
+    <title>hourly:self</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
@@ -27,7 +27,6 @@
         text-align: center;
       }
       p.lead {
-        padding-top: 0.5%;
         font-size: 24px;
         line-height: 30px;
       }
@@ -35,49 +34,72 @@
         font-size: 18px;
         line-height: 24px;
       }
-
-      #HS {
-        margin-top: -3px;
-        margin-bottom: -30px;
-      }
       .polaroid {
-        -webkit-transform: rotate(6deg);
-           -moz-transform: rotate(6deg);
-                transform: rotate(6deg);
+        margin-top: -15px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 290px;
+        width: 300px;
+        z-index: 5;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
       }
-      .polaroid img {
-        width: 60%;
+      .polaroid-1 {       
+        -webkit-transform: rotate(3deg);
+           -moz-transform: rotate(3deg);
+                transform: rotate(3deg);
+      }
+      .polaroid-2 {       
+        -webkit-transform: rotate(-2deg);
+           -moz-transform: rotate(-2deg);
+                transform: rotate(-2deg);
+      }
+      .polaroid-3 {       
+        -webkit-transform: rotate(5deg);
+           -moz-transform: rotate(5deg);
+                transform: rotate(5deg);
+      }
+      .polaroid i {
+        background-color: #0055d4;
+        text-align: center;
+        padding: 15px;
+        font-size: 200px;
                border: 15px solid #fff;
-               border-top: 15px solid #fff;
+           border-top: 15px solid #fff;
         border-bottom: 50px solid #fff;
         -webkit-box-shadow: 5px 5px 5px rgba(0,0,0,.25);
            -moz-box-shadow: 5px 5px 5px rgba(0,0,0,.25);
                 box-shadow: 5px 5px 5px rgba(0,0,0,.25);
       }
-      .polaroid:hover {
-        -webkit-transform: scale(1.25);
-           -moz-transform: scale(1.25);
-        position: relative;
-        z-index: 5;
+      .polaroid-large:hover {
+        -webkit-transform: scale(1.3);
+           -moz-transform: scale(1.3);
+        position: absolute;
+        top: 0;
+        z-index: 6;
       }
       .polaroid p {
-        font-size: 10px;
+        font-size: 18px;
+        margin: 0 25px 10px 25px;
         position: absolute;
-        text-align: center;
+        text-align: left;
         bottom: 0px;
         font-family: 'Kaushan Script', cursive;
-        color: #888;
+        color: black;
       }
-      .polaroid p.att{
-        margin: 0 10px 0 180px;
-      }
-      .polaroid a {
-        color: #888;
+      .polaroid-under {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 4;
       }
 
       /* Pitch and Action */
 
-      .section1, .section2, .section3, .section4 {
+      .section {
         padding: 1.5% 0%;
       }
       .thermometer {
@@ -153,12 +175,14 @@
         z-index: -1;
       }
 
+      /*Jumbotron*/
+      
       .jumbotron {
         margin-left: -20px;
         margin-right: -20px;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         padding: 70px 0 20px 0;
-        background: url(http://i.imgur.com/dyQHSG7.gif);
+        background: url(http://i.imgur.com/tl1mrxk.gif);
         color: #fff;
                 box-shadow: inset 0 5px 15px rgba(0,0,0,.4), inset 0 -5px 15px rgba(0,0,0,.4);
         -webkit-box-shadow: inset 0 5px 15px rgba(0,0,0,.4), inset 0 -5px 15px rgba(0,0,0,.4);
@@ -168,68 +192,60 @@
              -o-box-shadow: inset 0 5px 15px rgba(0,0,0,.4), inset 0 -5px 15px rgba(0,0,0,.4);
       }
       .jumbotron h1, .jumbotron p.lead {
-        background: -webkit-linear-gradient(#fff, #eee);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
         text-align: center;
-      }
-      .jumbotron .heading {
-        margin-top: 30px;
+        margin-bottom: 10px;
       }
 
       /* Carousel */
 
       .carousel {
-        margin-left: -20px;
-        margin-right: -20px;
-                box-shadow: inset 0 5px 15px rgba(0,0,0,.4), inset 0 -5px 15px rgba(0,0,0,.4);
-        -webkit-box-shadow: inset 0 5px 15px rgba(0,0,0,.4), inset 0 -5px 15px rgba(0,0,0,.4);
-           -moz-box-shadow: inset 0 5px 15px rgba(0,0,0,.4), inset 0 -5px 15px rgba(0,0,0,.4);
-         -khtml-box-shadow: inset 0 5px 15px rgba(0,0,0,.4), inset 0 -5px 15px rgba(0,0,0,.4);
-            -ms-box-shadow: inset 0 5px 15px rgba(0,0,0,.4), inset 0 -5px 15px rgba(0,0,0,.4);
-             -o-box-shadow: inset 0 5px 15px rgba(0,0,0,.4), inset 0 -5px 15px rgba(0,0,0,.4);
+        height: 250px;
+        margin-bottom: 0;
       }
       .carousel .container {
         position: relative;
         z-index: 8;
       }
+      .carousel-inner {
+        overflow:visible;
+        height: 250px;
+      }
       .carousel-control {
-        height: 80px;
         margin-top: 0;
-        font-size: 120px;
+        font-size: 50px;
         text-shadow: 0 1px 1px rgba(0,0,0,.4);
         background-color: transparent;
         border: 0;
+        top: 90%;
         z-index: 9;
       }
       .carousel .item {
-        height: 500px;
+        height: 250px;
+        text-align: center;
       }
       .carousel img {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 500px;
-        z-index: -1;
+        height: 200px;
       }
       .carousel-caption {
+        height: 250px;
         background-color: transparent;
         position: static;
         max-width: 100%;
-        padding: 0 20px;
-        margin-top: 150px;
+        padding: 0;
       }
       .carousel-caption h1 {
-        text-align: center;
-        font-size: 350%;
+        text-align: right;
         margin: 0;
         font-weight: bold;
         line-height: 1.25;
         text-shadow: 0 1px 1px rgba(0,0,0,.4);      
       }
       .carousel-caption .lead {
-        text-align: center;
+        text-align: right;
         margin: 0;
         font-weight: bold;
         line-height: 1.25;
@@ -254,8 +270,6 @@
           border-left: 1px white solid;
         }
         .carousel {
-          margin-left: 0px;
-          margin-right: 0px;
         }
         .carousel .img {
           width: auto;
@@ -267,11 +281,10 @@
           margin-top:5px;
         }
         .carousel {
-          height: 200px;
           margin-top: 25px;
         }
         .carousel .item {
-          height: 200px;
+          height: 150px;
         }
         .carousel img {
           height: 100%;
@@ -288,10 +301,6 @@
         .carousel-caption .lead {
           font-size: 100%;
         }
-
-        #HS {
-          display:none;
-        }
       }
 
      /* Landscape phones and down */
@@ -305,6 +314,8 @@
         }
         .linediv-r {
           border-top: 1px white solid;
+        }
+        .carousel {
         }
       }
 
@@ -340,7 +351,7 @@
 		<span class="icon-bar"></span>
 		<span class="icon-bar"></span>
 	      </button>
-	      <a class="brand" href="#"><img class="imgbar" src="http://i.imgur.com/4q9hFbU.png">HourlySelf</a>
+	      <a class="brand" href="#"><img class="imgbar" src="http://i.imgur.com/4q9hFbU.png">hourly:self</a>
 	      <div class="socialsmall">
 		<!-- AddThis Button BEGIN -->
 		<div class="addthis_toolbox addthis_default_style addthis_16x16_style">
@@ -370,12 +381,12 @@
     <header class="jumbotron">
       <div class="container"> 
 	<div class="row-fluid">
-          <div class="span4 offset2">
+          <div class="span5 offset1">
 	    <div class="heading">
-              <h1>HourlySelf</h1>
+              <h1>hourly:self</h1>
 	    </div> <!--/ heading -->
 	    <div class="subheading">
-              <p class="lead">Lorem
+              <p class="lead">Collect your data </br> and improve your life!
 	      </p><!--/ lead -->
 	      <div class="coinbase">
 		<a class="coinbase-button" data-button-style="custom_large" data-button-text="Support HourlySelf!" data-code="aec22928d1882ef0230b6d4112df88df" href="https://coinbase.com/checkouts/aec22928d1882ef0230b6d4112df88df">Support HourlySelf!</a>
@@ -393,10 +404,90 @@
 	      </div><!--/ addthis_toolbox addthis_toolbox2 addthis_default_style addthis_32x32_style -->
 	    </div><!--/ subheading -->
           </div><!--/ span4-->
-	  <div id="HS" class="span4 offset1 polaroid">
-	    <p class="att"><small>By <a href="http://www.geograph.org.uk/profile/2407">David Morris</a></small></p>
-	    <img src="http://i.imgur.com/fwEa9ur.png">
-	  </div><!--/ span4 offset2 polaroid-->
+	  <div class="span5">
+	    <div id="myCarousel" class="carousel">
+	      <div class="carousel-inner">
+		<div class="item active">
+		    <div class="carousel-caption">
+		      <div class="polaroid polaroid-1 polaroid-large">
+			<i class="icon-large icon-time"></i>
+			<p>
+			  <strong>1.</strong> Collect your data!
+			</p>
+		      </div>
+		    </div><!--/ carousel-caption -->
+		</div><!--/ item active -->
+		<div class="item">
+		  <div class="carousel-caption">
+		    <div class="polaroid polaroid-1 polaroid-under">
+		      <i class="icon-large icon-time"></i>
+		      <p>
+			<strong>1.</strong> Collect your data!
+			</p>
+		      </div>
+		      <div class="polaroid polaroid-2 polaroid-large">
+			<i class="icon-large icon-qrcode"></i>
+			<p>
+			<strong>2.</strong> Analize your reports!
+			</p>
+		      </div>
+		    </div><!--/ carousel-caption -->
+		</div><!--/ item -->
+		<div class="item">
+		    <div class="carousel-caption">
+		      <div class="polaroid polaroid-1 polaroid-under">
+			<i class="icon-large icon-time"></i>
+			<p>
+			<strong>1.</strong> Collect your data!
+			</p>
+		      </div>
+		      <div class="polaroid polaroid-2 polaroid-under">
+			<i class="icon-large icon-qrcoded"></i>
+			<p>
+			<strong>2.</strong> Analize your reports!
+			</p>
+		      </div>
+		      <div class="polaroid polaroid-3 polaroid-large">
+			<i class="icon-large icon-user"></i>
+			<p>
+			<strong>3.</strong> Improve your life!
+			</p>
+		      </div>
+		    </div><!--/ carousel-caption -->
+		</div><!--/ item active -->
+		<div class="item">
+		    <div class="carousel-caption">
+		      <div class="polaroid polaroid-1 polaroid-under">
+			<i class="icon-large icon-time"></i>
+			<p>
+			<strong>1.</strong> Collect your data!
+			</p>
+		      </div>
+		      <div class="polaroid polaroid-2 polaroid-under">
+			<i class="icon-large icon-qrcode"></i>
+			<p>
+			<strong>2.</strong> Analize your reports!
+			</p>
+		      </div>
+		      <div class="polaroid polaroid-3 polaroid-under">
+			<i class="icon-large icon-user"></i>
+			<p>
+			<strong>3.</strong> Improve your life!
+			</p>
+		      </div>
+		      <div class="polaroid">
+			<i class="icon-large icon-play"></i>
+			<p>
+			Watch the video for further details!
+			</p>
+		      </div>
+		    </div><!--/ carousel-caption -->
+		</div><!--/ item active -->
+	      </div><!--/ carousel-inner -->
+	      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+	      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+	    </div><!--/ carousel -->
+	  </div><!--/ span4 offset1-->
 	</div><!--row-fluid-->
       </div><!--/ container  -->
     </header>
@@ -431,8 +522,30 @@
       <!-- Marketing section -->
 
       <div class="row-fluid section1">
+	<div class="span4">
+	    <h2>1. Collect your dataaaaaaaaaaaaaaa</h2>
+	    <p>Collect data 
+	  </p>
+	</div><!--/ span4 -->
+	<div class="span4">
+	  <h2>2. aaaaaaaaaaaaaaaaa</h2>
+	  <p></p>
+	</div><!--/ span4 -->
+	<div class="span4">
+	  <h2>3. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h2>
+	  <p>
+	  </p>
+	</div><!--/ span4 -->
+      </div><!--/ row--fluid section1 -->
+
+
+      <div class="row-fluid section1">
 	<div class="span5 offset1 asset">
-	  <img class="img-polaroid" src="http://i.imgur.com/gBqznY4.jpg" alt="HorlySelf">
+	  <p>
+	    <h2>What is hourly:self?</h2>
+	    Hourly self is a service that helps you keep track of your quantitative self data by prompting you for the information at timed intervals. Furthermore, it presents the collected data in a meaningful way.
+	  </p>
+	  
 5B	</div><!--/ span5 offset1 asset -->
 	<div class="span5 copy">
 	  <p>Apps2Jobs improves the job search experience with a gamified app, great advice and a fun community. Join and make job searching fun and easy!</p>
@@ -479,45 +592,7 @@
       </div><!--/ row-fluid section2 -->
     </div><!--/ container -->      
 
-    <div id="myCarousel" class="carousel">
-      <div class="carousel-inner">
-	<div class="item active">
-	  <img src="http://i.imgur.com/6Yjrfld.jpg" alt="HourlySelf">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>HourlySelf</h1>
-              <p class="lead">
-		Record, understand, improve!
-	      </p>
-            </div><!--/ carousel-caption -->
-          </div><!--/ container -->
-	</div><!--/ item active -->
-       <div class="item">
-         <img src="http://i.imgur.com/l4tshyK.jpg" alt="HourlySelf">
-         <div class="container">
-           <div class="carousel-caption">
-             <h1>HourlySelf</h1>
-             <p class="lead">
-	       Join the job searching communtity for tips, advise and support.
-	     </p>
-           </div><!--/ carousel-caption -->
-         </div><!--/ container -->
-       </div><!--/ item -->
-       <div class="item">
-         <img src="http://i.imgur.com/GRLKJoe.jpg" alt="HourlySelf">
-         <div class="container">
-           <div class="carousel-caption">
-             <h1>HourlySelf</h1>
-             <p class="lead">
-	       Track and update your job applications from all our devices.
-	     </p>
-            </div><!--/ carousel-caption -->
-          </div><!--/ container -->
-        </div><!--/ item active -->
-      </div><!--/ carousel-inner -->
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-    </div><!--/ carousel -->
+
 
 
       
