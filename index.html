@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">
-    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
-    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
     <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text
 /css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800" rel="stylesheet" type="text/css">
@@ -25,6 +23,7 @@
       .heading, .subheading {
         font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
         text-align: center;
+        font-weight: 300;
       }
       p.lead {
         font-size: 24px;
@@ -37,16 +36,42 @@
 
       /* Pitch and Action */
 
+      .pitch {
+        text-align: center;
+      }
+      .pitch img {
+        height: 125px;
+      }
       .section {
         padding: 1.5% 0%;
       }
       .thermometer {
         text-align: center;
       }
-      .coinbase {
+      .btn {
         text-align: center;
-        padding: 0.5%;
-        margin-left: 1.5%;
+        padding: 1.5%;
+        margin: 1.5%;
+      }
+      .btn-support {
+        padding: 10px;
+        margin: 15px;
+      }
+      .btn-stripe {
+        height: 20px;
+        width: 85px;
+        font-size: 15px;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        padding: 0.5em;
+      }
+      .transfer {
+        text-align: center;
+      }
+      .follow {
+        font-size: 30px;
+        width: 25px;
+        margin: 0px;
+        text-align: center;
       }
       .stats-across {
         text-align: center;
@@ -63,17 +88,42 @@
         text-align: justify;
       }
       .asset {
-        padding: 2.5% 0%;
+        padding: 1.5% 0%;
       }
-      .footer {
-        color: #ccccc;
+      .asset p {
+        text-align: justify
+      }
+      .asset li {
+        font-size: 18px;
+        line-height: 24px;      
+      }
+      .asset .marketing {
+        font-size: 20px;
+        margin: 1.5em;
+        text-align: center;
+        color: #0499a3;
+      }
+      .asset i {
+        font-size: 15px;
+        font-weight: bold;
+        color: #0499a3;
+      }
+      .well p, .well li {
+        font-size: 15px;
+        text-align: justify;
+      }
+      .table {
+        margin-bottom: -10px;
+      }
+      .features .version {
+        font-weight: bold;
+      }
+      .features td {
         text-align: center;
       }
-      .footer p {
-        font-size: 11px;
-      }
-      .footer a {
-        color: #ccccff;
+      .featurette-image {
+        font-size: 150px;
+        color: #0499a3
       }
       .video{
         text-align: center;
@@ -82,6 +132,29 @@
         -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.75);
            -moz-box-shadow: 0 5px 15px rgba(0,0,0,.75);
                 box-shadow: 0 5px 15px rgba(0,0,0,.75);;
+      }
+      .popover {
+        color: #000;
+      }
+      .footer {
+        background: url(http://i.imgur.com/5x40LMw.gif);
+        color: #ffffff;
+        text-align: center;
+        margin-left: -10%;
+        width: 120%;
+        padding-bottom: 20px;
+                box-shadow: inset 0 5px 15px rgba(0,0,0,.4), inset 0 -5px 15px rgba(0,0,0,.4);
+        -webkit-box-shadow: inset 0 5px 15px rgba(0,0,0,.4), inset 0 -5px 15px rgba(0,0,0,.4);
+           -moz-box-shadow: inset 0 5px 15px rgba(0,0,0,.4), inset 0 -5px 15px rgba(0,0,0,.4);
+         -khtml-box-shadow: inset 0 5px 15px rgba(0,0,0,.4), inset 0 -5px 15px rgba(0,0,0,.4);
+            -ms-box-shadow: inset 0 5px 15px rgba(0,0,0,.4), inset 0 -5px 15px rgba(0,0,0,.4);
+             -o-box-shadow: inset 0 5px 15px rgba(0,0,0,.4), inset 0 -5px 15px rgba(0,0,0,.4);
+      }
+      .footer p {
+        font-size: 11px;
+      }
+      .footer a {
+        color: #ccccff;
       }
 
 
@@ -105,6 +178,9 @@
       .navbar .btn-navbar {
         margin-top: 5px;
        }
+      .navbar .brand {
+        font-size: 18px;
+      }
       .navbar .socialsmall{
         margin-top: 12px;
         text-align: left;
@@ -115,10 +191,30 @@
       .navbar .brand {
         padding: 10px 10px 10px 10px;
       }
-
       .imgbar {
-        margin: -4px 3px 0 -3px;
-        height: 25px;
+        margin: -8px 3px 0 -3px;
+        height: 24px;
+      }
+      #support:before { 
+        display: block; 
+        content: " "; 
+        margin-top: -40px; 
+        height: 40px; 
+        visibility: hidden; 
+      }
+      #about:before { 
+        display: block; 
+        content: " "; 
+        margin-top: -40px; 
+        height: 40px; 
+        visibility: hidden; 
+      }      
+      #contact:before { 
+        display: block; 
+        content: " "; 
+        margin-top: -40px; 
+        height: 40px; 
+        visibility: hidden; 
       }
 
       /*Jumbotron*/
@@ -141,6 +237,11 @@
         text-align: center;
         margin-bottom: 10px;
       }
+      .jumbotron p.lead {
+        text-align: center;
+        margin-bottom: 3px;
+      }
+
 
       /* http://support.addthis.com/customer/portal/questions/1136093-share-buttons-in-center-position */      
       
@@ -162,6 +263,11 @@
         }
       }
 
+      @media (max-width: 767px){
+        .btn-stripe {
+          margin-top: -25px
+        }
+      }
       @media (max-width: 640px) {
         .navbar-wrapper {
           margin-top: 5px;
@@ -179,9 +285,15 @@
         }
         .linediv-r {
           border-top: 1px white solid;
-        
+        }
+        .well {
+          margin-left: -35px;
+          margin-right: -35px;
+        }
+        .copy h2 {
+          margin-left: -13%;
+        }
       }
-
 
     </style>
     <script type="text/javascript">
@@ -228,16 +340,17 @@
 	      </div><!--/ socialsmall -->
 	      <div class="nav-collapse collapse">
 		<ul class="nav">
-		  <li class="active"><a href="#">Home</a></li>
+		  <li><a href="#">Home</a></li>
 		  <li><a href="#about">About</a></li>
 		  <li><a href="#contact">Contact</a></li>
-		</ul>
-	      </div><!--/ .nav-collapse -->
+		  <li><a href="#supporters" class="coming" data-placement="bottom" data-content="&nbsp;Coming &nbsp;&nbsp;soon!" >Supporters</a></li>
+		</ul><!--/ nav -->
+	      </div><!--/ nav-collapse -->
 	    </div><!--/ container -->
 	  </div><!--/ navbar-inner -->
-	</div><!--/ navbar navbar-inverse -->
-      </div> <!-- /navbar-wrapper -->
-    </div><!-- /container -->
+	</div><!--/ navbar -->
+      </div> <!-- / container -->
+    </div><!-- / navbar-wrapper -->
 
     <!-- Mobile-friendly jumbotron from twitter bootstrap -->
 
@@ -249,12 +362,10 @@
               <h1>hourly:self</h1>
 	    </div> <!--/ heading -->
 	    <div class="subheading">
-              <p class="lead">Collect your life,</br>improve your life!
-	      </p><!--/ lead -->
+              <p class="lead">Record your life:<br/>improve your life!</p>
 	      <div class="coinbase">
-		<a class="coinbase-button" data-button-style="custom_large" data-button-text="Support HourlySelf!" data-code="aec22928d1882ef0230b6d4112df88df" href="https://coinbase.com/checkouts/aec22928d1882ef0230b6d4112df88df">Support HourlySelf!</a>
-		<script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
-	      </div>
+		<a href="#support" class="btn btn-support btn-inverse btn-large">Pre-order hourly:self!</a>
+	      </div><!--/ coinbase -->
 	      <!-- AddThis Button BEGIN -->
 	      <div class="addthis_toolbox addthis_toolbox2 addthis_default_style addthis_32x32_style">
 		<a class="addthis_button_facebook"></a>
@@ -266,13 +377,15 @@
 		<a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a>
 	      </div><!--/ addthis_toolbox addthis_toolbox2 addthis_default_style addthis_32x32_style -->
 	    </div><!--/ subheading -->
-          </div><!--/ span4-->
+          </div><!--/ span5 offset1 -->
 	  <div class="span5 video">
-	  <img src="http://i.imgur.com/msHMsi0.png" alt="Video comming soon!"/>
-	  </div><!--/ span5-->
-	</div><!--row-fluid-->
+	    <a class="coming" data-placement="left" data-content="An explanatory video will be available soon." data-original-title="Coming soon!">
+	      <img  src="http://i.imgur.com/msHMsi0.png" alt="Video comming soon!"/>
+	    </a><!-- /coming -->
+	  </div><!--/ span5 video -->
+	</div><!--/ row-fluid -->
       </div><!--/ container  -->
-    </header>
+    </header><!--/ jumbotron -->
     
     <!-- Using row-fluid inside of container for resizable layout -->
 
@@ -303,36 +416,321 @@
       
       <!-- Marketing section -->
 
-      <div class="row-fluid section1">
-	<div class="span4">
+      <div class="row-fluid section">
+	<div class="span4 pitch">
+	  <img src="http://i.imgur.com/A0a2hgh.png" alt="1. Collect your data" />
 	    <h2>1. Collect your data</h2>
-	    <p>h:s collects your data asking you directly and connecting to your QSelf apps and gadgets! 
+	    <p><b>hourly:self</b> collects your QSelf data connecting to your apps and gadgets or prompting you directly! 
 	  </p>
 	</div><!--/ span4 -->
-	<div class="span4">
-	  <h2>2. View your data</h2>
-	  <p>h:s presets your data in a meaningful way and helps you understand your behaviour! </p>
+	<div class="span4 pitch">
+	  <img src="http://i.imgur.com/KeMrG2y.png" alt="2. View your data" />
+	  <h2>2. View your reports</h2>
+	  <p><b>hourly:self</b> presets your data in a meaningful way and helps you understand your habits and behaviours!</p>
 	</div><!--/ span4 -->
-	<div class="span4">
+	<div class="span4 pitch">
+	  <img src="http://i.imgur.com/s7StJ3A.png" alt="3. Improve your life" />
 	  <h2>3. Improve your life</h2>
-	  <p>h:s keeps you foucused on your targets and goals on your life journey!
-	  </p>
+	  <p><b>hourly:self</b> keeps you focused on your targets and life goals!</p>
 	</div><!--/ span4 -->
-      </div><!--/ row--fluid section1 -->
+      </div><!--/ row--fluid section -->
 
-      <div class="row-fluid section1">
-	<div class="span7 asset">
-	  <p>
+      <div class="row-fluid section">
+	<div class="container">
+	  <div class="span7 asset">
+	    <a id="about"></a>
 	    <h2>What is hourly:self?</h2>
-	    Hourly self is a service that helps you keep track of your quantitative self data by prompting you for the information at timed intervals. Furthermore, it presents the collected data in a meaningful way.
-	  </p>
-	  
-	</div><!--/ span5 offset1 asset -->
-	<div class="span5 copy">
-	</div><!--/ span5 copy -->
-      </div><!--/ row--fluid section1 -->
+	    <p class="marketing"><b>hourly:self is a service that collects your Qself data, presents it in a meaningful way and helps you achieve your objectives.</p></b>
+	    <p><b>hourly:self</b>'s goal is to securely collect, keep and present all your Qself information in a centralised manner. With all the information in one location, as opposed to scattered over various apps and services, you will be able to cross-reference and analyse all your data holistically.</p>
+	    <p>The first instance of hourly:self will prompt you for Qself data at specified intervals and will present it on your dashboard. The next instances will include a plugin system to import data from various Qself services and apps, new useful representations of your data and integration with social networks.</p>
+	    <h2>How does it work?</h2>
+	    <ol>
+	      <li>
+		<b>Sign up</b> for a secure account at hourly:self. The registration process is quick and easy and all your data is secure.  
+	      </li>
+	      <li>
+		Create a new <b>record</b> to hold a series of data. <br/>
+		<i>Ex. You create a 'Sleep' record to track the number of hours you sleep each day.</i>
+	      </li>
+	      <li>
+		Set up a <b>timer</b> to prompt for your data. Future versions will also import it from your favourite QSelf apps and services.<br/>
+		<i>Ex. You set your 'Sleep' record to prompt you at nine o'clock every morning on how many hours you slept the last night.</i>
+	      </li>
+	      <li>
+		At the preset time, hourly:self will <b>prompt</b> you for your data.<br/>
+		<i>Ex. At nine o'clock in the morning you get a promt asking you to introduce the hours you have slept.</i>
+	      </li>
+	      <li>
+		<b>View</b> your data on your dashboard. Cross-reference it with other data.<br/>
+		<i>Ex. You check the amount of hours you sleep daily and cross-reference them to the amount of coffee you consume.</i>
+	      </li>
+	      <li>
+		Set <b>targets</b> or goals for your records and work towards improving your life!<br/>
+		<i>Ex. You set a target in coffee consumption.</i>
+	      </li>
+	      <li>
+		<b>Track</b> your progress towards the targets you have set. Observe how these impact on other records.<br/>
+		<i>Ex. You track your lower coffee consumption and analyse the effect it has on your sleeping hours.</i>
+	      </li>
+	    </ol>
+	    <h2>Versions and Features</h2>
+	    <p>hourly:self will launch with two different accounts, the Free(F) and the Premium(P). The following table details what features to expect at each version.</p>
+	    <br/>
+	    <table class="table features">
+	      <tr class="version">
+		<th></th>
+		<td>Launch</td>
+		<td>v. 0.5</td>
+		<td>v. 1.0</td>
+		<td>Planned</td>
+	      </tr>
+	      <tr>
+		<td>Secure database</td>
+		<td> P & F </td>
+		<td> P & F </td>
+		<td> P & F </td>
+		<td> P & F </td>
+	      </tr>
+	      <tr>
+		<td>Prompt input</td>
+		<td> P & F </td>
+		<td> P & F </td>
+		<td> P & F </td>
+		<td> P & F </td>
+	      </tr>
+	      <tr>
+		<td>Data Dashboard</td>
+		<td> P & F </td>
+		<td> P & F </td>
+		<td> P & F </td>
+		<td> P & F </td>
+	      </tr>
+	      <tr>
+		<td>Custom records</td>
+		<td> P </td>
+		<td> P & F </td>
+		<td> P & F </td>
+		<td> P & F </td>
+	      </tr>
+	      <tr>
+		<td>Custom timers</td>
+		<td></td>
+		<td> P </td>
+		<td> P & F </td>
+		<td> P & F </td>
+	      </tr>
+	      <tr>
+		<td>Import plugins</td>
+		<td></td>
+		<td> P </td>
+		<td> P </td>
+		<td> P & F </td>
+	      </tr>
+	      <tr>
+		<td>Advanced dashboard</td>
+		<td></td>
+		<td></td>
+		<td> P </td>
+		<td> P & F </td>
+	      </tr>
+	      <tr>
+		<td>Goal control</td>
+		<td></td>
+		<td></td>
+		<td> P </td>
+		<td> P & F </td>
+	      </tr>
+	    </table>
+	    <br/>
+	    <h4>Secure database</h4>
+	    <h4>Prompt imput</h4>
+	    <h4>Data Dashboard</h4>
+	    <h4>Custom records</h4>
+	    <h4>Custom timers</h4>
+	    <h4>Input plugins</h4>
+	    <h4>Advanced Dashboard</h4>
+	    <h4>Goal control</h4>
+	  </div><!--/ span7 asset -->
+
+	  <div class="span5 copy">
+	    <a id="support"></a>
+	    <h2>Pledges and Perks</h2>
+	    <div class="well well-small">
+	      <div class="row-fluid">
+		<div class="span8">
+		  <h4>Stanford-MOOC classmate!</h4>
+		  <p>Make a donation of 0.001BTC (aprox $0.1) or more and tweet from StartupMOOC to achieve <b>Stanford-MOOC classmate</b> status.</p>
+		  <ul> 
+		    <li>
+		      Your name will be included as <b>Classmate</b> together with your project URL in the <b>Supporters</b> section of the website.
+		    </li>
+		    <li>
+		      I will suport your project on StartupMOOC (I will allocate my BTC pool to the best supporters and will tweet for all).
+		    </li>
+		  </ul>
+		</div><!--/ span8 -->
+		<div class="span4 transfer">
+		  <a class="coinbase-button" data-code="e2dcb8e916746198d49c3f69cd8dd669" data-button-style="custom_small" data-button-text="0.001B" data-width="103" data-height="39" href="https://coinbase.com/checkouts/e2dcb8e916746198d49c3f69cd8dd669">0.001B</a>
+		  <script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
+		</div><!--/ span4-->
+	      </div><!--/ row-fluid -->
+	    </div><!--/ well -->
+	    <div class="well well-small">
+	      <div class="row-fluid">
+		<div class="span8">
+		  <h4>Early supporter!</h4>
+		  <p>Make a donation of 10 USD, 0.1BTC or more to achieve <b>Early supporter</b> status.</p>
+		  <ul>
+		    <li>Your name will be included as <b>Early supporter</b> on the <b>Supporters</b> section of the website.
+		    </li>
+		    <li>
+		      You will get early access to the free version of hourly:self.
+		    </li>		    
+		  </ul>
+		</div><!--span8 -->
+		<div class="span4 transfer">
+		  <a class="coinbase-button" data-code="5e1cce49e3393c5dba1091260cda4ce1" data-button-style="custom_small" data-button-text="&nbsp;&nbsp;0.1B&nbsp;&nbsp;" data-width="103" data-height="39" href="https://coinbase.com/checkouts/5e1cce49e3393c5dba1091260cda4ce1">0.1B</a>
+		  <script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
+		  <a class="btn btn-stripe btn-large coming"  data-placement="bottom" data-content="Coming soon!">
+		    <i class="icon-shopping-cart"></i> $10
+		  </a>		  
+		</div><!--/ span4 -->
+	      </div><!--/ row-fluid -->
+	    </div><!--/ well -->
+	    <div class="well well-small">
+	      <div class="row-fluid">
+		<div class="span8">
+		  <h4>QSelf enthusiast!</h4>
+		  <p>Make a donation of 20 USD, 0.2BTC or more to achieve <b>Qself enthusiast</b> status.</p>
+		  <ul>
+		    <li>
+		      Your name will be included as <b>QSelf enthusiast</b> on the <b>Supporters</b> section of the website. 
+		    </li>
+		    <li>			
+		      You will get early access to the free verion of hourly:self and five extra invites for your friends.
+		    </li>
+		    <li>
+		      You will get a 30% discount voucher for a year of premium service.
+		    </li>
+		    <li>
+		      If the crowdfunding effort isn't successful you get your money back. 
+		    </li>
+		  </ul>
+		</div><!--/ span8 -->
+		<div class="span4 transfer">
+		  <a class="coinbase-button" data-code="a2b36d86737e12184b895ab09e8d4f35" data-button-style="custom_small" data-button-text="&nbsp;&nbsp;0.2B&nbsp;&nbsp;" data-width="103" data-height="39" href="https://coinbase.com/checkouts/a2b36d86737e12184b895ab09e8d4f35">0.2B</a>
+		  <script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
+		  <a class="btn btn-stripe btn-large coming" data-placement="bottom" data-content="Coming soon!">
+		    <i class="icon-shopping-cart"></i> $20
+		  </a>
+		</div><!--/ span4 -->
+	      </div><!--/ row-fluid -->
+	    </div><!--/ well -->
+	    <div class="well well-small">
+	      <div class="row-fluid">
+		<div class="span8">
+		  <h4>Premium advocate!</h4>
+		  <p>Make a donation of 50 USD, 0.5BTC or more to achieve <b>Premium advocate</b> status. 
+		  </p>
+		  <ul>
+		    <li>
+		      Your name will be included as <b>Premium advocate</b> on the <b>Supporters</b> section of the website. 
+		    </li>
+		    <li>			
+		      You will get early access to the premium version of hourly:self.
+		    </li>
+		    <li>
+		      If the crowdfunding effort isn't successful you get your money back. 			  
+		    </li>
+		  </ul>
+		</div><!--/ span8 -->
+		<div class="span4 transfer">
+		  <a class="coinbase-button" data-code="eaf818ecd5ed8867d54d98803720ef9b" data-button-style="custom_small" data-button-text="&nbsp;&nbsp;0.5B&nbsp;&nbsp;" data-width="103" data-height="39" href="https://coinbase.com/checkouts/eaf818ecd5ed8867d54d98803720ef9b">   0.5B   </a>
+		  <script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
+		  <a class="btn btn-stripe btn-large coming" data-placement="bottom" data-content="Coming soon!">
+		    <i class="icon-shopping-cart"></i> $50
+		  </a>
+		</div><!--/ span4 -->
+	      </div><!--/ row-fluid -->
+	    </div><!--/ well -->
+	    <div class="well well-small">
+	      <div class="row-fluid">
+		<div class="span8">
+		  <h4>Patron!</h4>
+		  <p>Make a donation of 100 USD, 1BTC or more to achieve <b>Patron</b> status. 
+		  </p>
+		  <ul>
+		    <li>
+		      Your name will be included as <b>Patron</b> on the <b>Supporters</b> section of the website. 
+		    </li>
+		    <li>			
+		      You will get early access to the premium version of hourly:self.
+		    </li>
+		    <li>
+		      You will get an extra premium access to give as a gift or a discount of 50% for your second year of hourly:self.
+		    </li>
+		    <li>
+		      If the crowdfunding effort isn't successful you get your money back. 			  			
+		    </li>
+		  </ul>
+		</div><!--/ span8 -->
+		<div class="span4 transfer">
+		  <a class="coinbase-button" data-code="7c16d2af9adf2adf0ba3008a3d58302c" data-button-style="custom_small" data-button-text="&nbsp;&nbsp;&nbsp;1B&nbsp;&nbsp;&nbsp;" data-width="103" data-height="39" href="https://coinbase.com/checkouts/7c16d2af9adf2adf0ba3008a3d58302c">1B</a>
+		  <script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
+		  <a class="btn btn-stripe btn-large coming" data-placement="bottom" data-content="Coming soon!">
+		    <i class="icon-shopping-cart"></i> $100
+		  </a>
+		</div><!--/ span4 -->
+	      </div><!--/ row-fluid -->
+	    </div><!--/ well -->
+	    <div class="well well-small">
+	      <div class="row-fluid">
+		<div class="span8">
+		  <h4>QSelf angel!</h4>
+		  <p>Make a donation of 500 USD, 5BTC or more to achieve <b>QSelf angel</b> status. 
+		  </p>
+		  <ul>
+		    <li>
+		      Your name will be included as <b>QSelf angel</b> on the <b>Supporters</b> section of the website. 
+		    </li>
+		    <li>			
+		      You will get early access to the premium version of hourly:self.
+		    </li>
+		    <li>
+		      You will get three extra early premium accesses to give as gifts or a second year of hourly:self for free.
+		    </li>
+		    <li>
+		      You will get to meet the hourly:self team and talk about the direction the app is going and what features ar more important to you.
+		    </li>
+		    <li>
+		      If the crowdfunding effort isn't successful you get your money back. 			  			  
+		    </li>
+		  </ul>
+		</div><!--/ span8 -->
+		<div class="span4 transfer">
+		  <a class="coinbase-button" data-code="a9105629f94c6a38943ca1a64b6dd248" data-button-style="custom_small" data-button-text="&nbsp;&nbsp;&nbsp;5B&nbsp;&nbsp;&nbsp;" data-width="103" data-height="39" href="https://coinbase.com/checkouts/a9105629f94c6a38943ca1a64b6dd248">Donate Bitcoins</a>
+		  <script src="https://coinbase.com/assets/button.js" type="text/javascript"></script>
+		  <a class="btn btn-stripe btn-large coming" data-placement="bottom" data-content="Coming soon!">
+		    <i class="icon-shopping-cart"></i> $500
+		  </a>
+		</div><!--/ span4 -->
+	      </div><!--/ row-fluid -->
+	    </div><!--/ well -->
+	  </div><!--/ span5 copy -->
+	</div><!--/ container -->
+      </div><!--/ row--fluid section -->
 
 
+      <div class="featurette">
+	<a id="contact"></a>
+        <i class="featurette-image pull-left icon-envelope"></i>
+        <h2 class="featurette-heading">Contact</h2>
+        <p class="lead"> You can contact us at <a href="mailto:contact@hourlyself.com">contact@hourlyself.com</a> and follow us on
+	  <a href="http://plus.google.com/110776004832862067647" class="btn btn-google-plus follow"><i class="icon-google-plus"></i></a>
+	  <a href="http://twitter.com/HourlySelf" class="btn btn-twitter follow"><i class="icon-twitter"></i></a>
+	  <a href="http://www.facebook.com/hourly.self" class="btn btn-facebook follow"><i class="icon-facebook"></i></a>
+	</p>
+      </div><!--/ featurette -->
 
     <!-- FAQ -->
 
@@ -342,9 +740,19 @@
           <div class="accordion" id="accordion2">
             <div class="accordion-group">
               <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">How can I help?</a>
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">What does QSelf mean?</a>
               </div><!--/ accordion-heading -->
               <div id="collapseOne" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  We use the term QSelf to refer to the <a href="http://en.wikipedia.org/wiki/Quantified_Self">quantified self</a> movement. When we talk about QSelf data we refer to information relative to your daily activities such as sport, physical activity, sleep, food intake, weight, emotional states, lifelogging, etc.
+                </div><!--/ accordion-inner -->
+              </div><!--/ collapseOne accordion-body collapse-->
+            </div><!--/ accordion-group -->
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">How can I help?</a>
+              </div><!--/ accordion-heading -->
+              <div id="collapseTwo" class="accordion-body collapse">
                 <div class="accordion-inner">
                   You can pre-order the product, donate some funds or tweet about us! 
                 </div><!--/ accordion-inner -->
@@ -352,12 +760,11 @@
             </div><!--/ accordion-group -->
             <div class="accordion-group">
               <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">Where can I find more information and updates on the project?</a>
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">Where can I find more information and updates on the project?</a>
               </div><!-- accordion-heading -->
-              <div id="collapseTwo" class="accordion-body collapse">
+              <div id="collapseThree" class="accordion-body collapse">
                 <div class="accordion-inner">
-                  The page will be continuosly updated during the campaign. You can also find us on:
-		  
+                  The page will be continuously updated during the campaign. You can also find us on <a href="#contact">google plus, twitter and facebook.</a>	  
                 </div><!--/ accordion-inner -->
               </div><!--/ collapseTwo accordion-body collapse-->
             </div><!--/ accordion-group -->
@@ -374,7 +781,13 @@
 	</div><!--/ span12 -->
       </div><!--/ row-fluid footer -->
     </div><!--/ container -->
-
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
+    <script>  
+      $(function ()  
+      { $(".coming").popover();  
+      });  
+    </script> 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -384,6 +797,6 @@
       ga('create', 'UA-43038348-1', 'hourlyself.com');
       ga('send', 'pageview');
 
-    </script>
+     </script>
   </body>
 </html>
